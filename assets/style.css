@@ -1,226 +1,268 @@
-/* estilos compartidos en los 5html */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+@charset "UTF-8";
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 .falso-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-image: url(./img/hibiscus1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url(./img/hibiscus1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* estilos que pisan los predeterminados de bootstrap para el nav */
 .space-between {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    }
-    
-    .grow {
-    flex-grow: 0 !important;
-    }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.grow {
+  flex-grow: 0 !important;
+}
 
-/* estilos de main para el index */
+/*estilos para el main de index*/
 .main-index {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 .main-index div {
-    display: grid;
-    padding: 2rem 5rem;
-    height: 70%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+  display: grid;
+  padding: 2rem 5rem;
+  height: 70%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 .main-index div img {
-    width: 100%;
-    object-fit: cover;
-    justify-self: center;
-    border-radius: 50%;
+  width: 100%;
+  object-fit: cover;
+  justify-self: center;
+  border-radius: 50%;
 }
 
-@media (min-width: 1024px) {
-    .main-index div img {
-        width: 30%; 
-        height: auto; 
-    }
-}
-
-/* estilos para footer */
+/* estilos para footer de index*/
 footer {
-    width: 100%;
-    height: 100px;
+  width: 100%;
+  height: 100px;
 }
 footer div {
-    text-align: center;
-    width: 100%;
-    height: 100px;
+  text-align: center;
+  width: 100%;
+  height: 100px;
 }
 footer div img {
-    margin: 25px 25px 0px;
+  margin: 25px 25px 0px;
 }
-
-
 
 /* estilos para el main de "quienes somos"*/
-
-.container-quienes-somos{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows:2fr;
+.container-quienes-somos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr;
 }
-main .title{
-    margin-top: 1rem;
-    text-align: center;
-    font-family: metric-webfont;
-    font-size: 2rem;
-    color: black;
+.container-quienes-somos .title {
+  margin-top: 1rem;
+  text-align: center;
+  font-family: metric-webfont;
+  font-size: 2rem;
+  color: black;
 }
-.container-articulo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding-bottom: 1rem;
-    color: beige;
+.container-quienes-somos .container-articulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  padding-bottom: 1rem;
+  color: beige;
 }
-.container-articulo article {
-    width: 100%;
-    max-width: 300px;
+.container-quienes-somos .container-articulo article {
+  width: 100%;
+  max-width: 300px;
 }
-.container-articulo img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 50%;
-    margin-top: 1rem;
+.container-quienes-somos .container-articulo img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 1rem;
 }
-@media (min-width: 1024px) {
-    .container-articulo {
-        flex-direction: row;
-        justify-content: center;
-        gap: 2rem;
-    }
-}
-
 
 /* estilos para EVENTOS */
-
-.container-eventos{
-    margin-bottom: 3rem;
+.main-eventos h2 {
+  margin-top: 1rem;
+  text-align: center;
+  font-family: metric-webfont;
+  font-size: 2rem;
+  color: black;
 }
-main h2{
-    margin-top: 1rem;
-    text-align: center;
-    font-family: metric-webfont;
-    font-size: 2rem;
-    color: black;
+.main-eventos .container-eventos {
+  margin-bottom: 3rem;
 }
-
-.eventos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: wheat;
-    margin: 2rem 4rem 0px;
-    padding: 1rem;
-    border: 1px beige solid;
+.main-eventos .container-eventos .eventos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+  margin: 2rem 4rem 0px;
+  padding: 1rem;
+  border: 2px black solid;
 }
-.fecha{
-    width: 100%;
-    text-align: center;
+.main-eventos .container-eventos .eventos .fecha {
+  width: 100%;
+  text-align: center;
 }
-.fecha a{
-    display: flex;
-    flex-direction: column;
-    color: beige;
-    text-decoration: none;
+.main-eventos .container-eventos .eventos .fecha a {
+  display: flex;
+  flex-direction: column;
+  color: beige;
+  text-decoration: none;
 }
-.fecha a:hover{
-    color: red;
+.main-eventos .container-eventos .eventos .fecha a:hover {
+  color: red;
 }
-
-.descripcion{
-    display: none;
+.main-eventos .container-eventos .eventos .descripcion {
+  display: none;
 }
-@media (min-width: 1024px) {
-    .descripcion{
-        display: block;
-    }
-    .fecha{
-        margin: 0rem 2rem;
-    }
-}
-
 
 /* estilos para CONTACTANOS */
-
 .main-contactanos {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 .main-contactanos div {
-    display: grid;
-    padding: 2rem 5rem;
-    height: 70%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+  display: grid;
+  padding: 2rem 5rem;
+  height: 70%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 .main-contactanos div img {
-    width: 100%;
-    object-fit: cover;
-    justify-self: center;
-    border-radius: 50%;
-}
-@media (min-width: 1024px) {
-    .main-contactanos div img {
-        width: 30%; 
-        height: auto; 
-    }
+  width: 100%;
+  object-fit: cover;
+  justify-self: center;
+  border-radius: 50%;
 }
 
-/* codigo para main de merch */
-.merch-container-img :nth-child(2n){
-    display: none;
-}
-.merch-container-img{
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4fr;
-    grid-gap: 2rem;
-    justify-items: center;
+/* estilos para MERCH */
+.merch-main h2 {
+  margin-top: 1rem;
+  text-align: center;
+  font-family: metric-webfont;
+  font-size: 2rem;
+  color: black;
 }
 
-.merch-container-img img:hover{
-    border-radius: 8rem;
+.merch-container-img {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr;
+  grid-gap: 2rem;
+  justify-items: center;
 }
-@media (min-width: 1024px) {
-
-    .merch-container-img :nth-child(2n){
-        display: block;
-    }
-    .merch-container-img {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
+.merch-container-img img:hover {
+  border-radius: 8rem;
 }
-
 
 /* codigo para fuente */
 @font-face {
-    font-family: 'metric-webfont';
-    src: url('fonts/metric-webfont.woff2') format('woff2'),
-         url('fonts/metric-webfont.woff') format('woff'),
-         url('fonts/metric-webfont.ttf') format('truetype');
+  font-family: "metric-webfont";
+  src: url("fonts/metric-webfont.woff2") format("woff2"), url("fonts/metric-webfont.woff") format("woff"), url("fonts/metric-webfont.ttf") format("truetype");
+}
+/*media queries DESKTOP*/
+/*index*/
+@media (min-width: 1024px) {
+  .main-index div img {
+    width: 30%;
+    height: auto;
   }
+}
+/*quienes somos*/
+@media (min-width: 1024px) {
+  .container-quienes-somos .container-articulo {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+/*eventos*/
+@media (min-width: 1024px) {
+  .main-eventos .container-eventos .eventos .descripcion {
+    display: block; /* Muestra la descripción en pantallas grandes */
+  }
+  .main-eventos .container-eventos .eventos .fecha {
+    margin: 0rem 2rem; /* Ajusta el margen */
+  }
+}
+/*contactanos*/
+@media (min-width: 1024px) {
+  .main-contactanos div img {
+    width: 30%;
+    height: auto;
+  }
+}
+/*merch*/
+@media (min-width: 1024px) {
+  .merch-container-img {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+/*Media queries TABLET*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-index div {
+    padding: 2rem;
+  }
+  .main-index div img {
+    width: 80%;
+  }
+}
+/*quienes somos*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container-quienes-somos {
+    font-size: 1.8rem;
+    height: 700px;
+    margin-bottom: 8rem;
+  }
+  .container-articulo {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+/*eventos*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container-eventos {
+    margin-top: 12rem;
+  }
+  .main-eventos .container-eventos .eventos {
+    flex-direction: column;
+    margin: 1rem 2rem;
+  }
+}
+/*contactanos*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-contactanos div img {
+    width: 80%;
+  }
+  .main-contactanos div {
+    padding: 1rem;
+  }
+}
+/*merch*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .merch-container-img {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-template-rows: auto; /* Ajustar filas automáticamente */
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

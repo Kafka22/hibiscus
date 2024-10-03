@@ -1,0 +1,19 @@
+{
+  "name": "hibiscus",
+  "version": "1.0.0",
+  "description": "segunda entrega coderhouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kafka22/hibiscus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kafka22/hibiscus/issues"
+  },
+  "homepage": "https://github.com/Kafka22/hibiscus#readme"
+}

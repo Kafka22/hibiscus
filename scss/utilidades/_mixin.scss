@@ -1,0 +1,13 @@
+       @mixin grid{
+            display: grid;
+            padding: 2rem 5rem;
+            height: 70%;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
+        @mixin img{
+                width: 100%;
+                object-fit: cover;
+                justify-self: center;
+                border-radius: 50%;
+         }
