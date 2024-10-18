@@ -1,0 +1,476 @@
+@charset "UTF-8";
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.falso-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: linear-gradient(to right top, #0e0e0e, #140f17, #1c101c, #260e1e, #300b1c);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* estilos que pisan los predeterminados de bootstrap para el nav */
+.custom-navbar {
+  background-image: linear-gradient(to right bottom, #0e0e0e, #140f17, #1c101c, #260e1e, #300b1c);
+}
+
+.custom-navbar .nav-link {
+  color: white;
+}
+
+.custom-navbar .nav-link.active {
+  color: rgb(115, 6, 125); /* color del enlace activo */
+}
+
+.custom-navbar .navbar-brand {
+  color: white;
+}
+
+.space-between {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.grow {
+  flex-grow: 0 !important;
+}
+
+@media (max-width: 992px) {
+  .navbar-toggler {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1;
+    border: none; /* Quitar el borde del botón hamburguesa */
+    outline: none; /* Eliminar borde cuando está enfocado */
+    box-shadow: none; /* Eliminar la sombra predeterminada */
+  }
+  /* Estilos adicionales para el estado activo del botón hamburguesa */
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+}
+/*estilos para el main de index*/
+.main-index {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.main-index div {
+  display: grid;
+  padding: 2rem 5rem;
+  height: 70%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.main-index div img {
+  width: 100%;
+  object-fit: cover;
+  justify-self: center;
+  border-radius: 50%;
+}
+
+/* estilos para footer de index*/
+footer {
+  width: 100%;
+  height: 100px;
+}
+footer div {
+  text-align: center;
+  width: 100%;
+  height: 6.25rem;
+}
+footer div img {
+  margin: 1.563rem 1.563rem 0rem;
+}
+
+/* estilos para el main de "quienes somos"*/
+.container-quienes-somos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr;
+}
+.container-quienes-somos .title {
+  margin-top: 1rem;
+  text-align: center;
+  font-family: metric-webfont;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  color: beige;
+}
+.container-quienes-somos .container-articulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  padding-bottom: 1rem;
+  color: beige;
+}
+.container-quienes-somos .container-articulo article {
+  width: 100%;
+  max-width: 18.75rem;
+}
+.container-quienes-somos .container-articulo .galeria {
+  display: flex;
+  flex-direction: column;
+}
+.container-quienes-somos .container-articulo .galeria .carrousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.container-quienes-somos .container-articulo .galeria .carrousel .atras, .container-quienes-somos .container-articulo .galeria .carrousel .adelante {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin: 0rem 1rem;
+}
+.container-quienes-somos .container-articulo .galeria .carrousel .atras img, .container-quienes-somos .container-articulo .galeria .carrousel .adelante img {
+  width: 100%;
+  object-fit: cover;
+  justify-self: center;
+  border-radius: 50%;
+}
+.container-quienes-somos .container-articulo .galeria .carrousel .imagenes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+.container-quienes-somos .container-articulo .galeria .carrousel .imagenes .img {
+  box-shadow: 0rem 0.25rem 0.625rem 0rem rgba(0, 0, 0, 0.85);
+  width: 100%;
+  max-width: 18.75rem;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 1rem;
+  object-fit: cover;
+  filter: saturate(175%);
+}
+.container-quienes-somos .container-articulo .galeria .carrousel .imagenes .texto {
+  overflow: hidden;
+  position: absolute;
+  flex-direction: column;
+  transform: translate(0rem);
+  margin-bottom: 0.563rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 18.75rem;
+  transition: 1s;
+}
+.container-quienes-somos .container-articulo .galeria .carrousel .imagenes .texto h3 {
+  text-shadow: 0rem 0rem 0.938rem black;
+  padding-top: 2.5rem;
+  color: wheat;
+  font-weight: 300;
+  font-size: 1.688rem;
+}
+.container-quienes-somos .container-articulo .galeria .carrousel .imagenes .texto p {
+  align-items: center;
+  padding: 1.25rem;
+  color: wheat;
+  font-size: 0rem;
+  font-weight: 300;
+}
+.container-quienes-somos .container-articulo .galeria .carrousel .imagenes:hover .texto {
+  transition: height 1s, transform 1s, background-color 1s;
+  transform: translateY(-0.625rem);
+}
+.container-quienes-somos .container-articulo .galeria .carrousel .imagenes:hover .texto p {
+  transition: font-size 0s 0.2s linear;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+.container-quienes-somos .container-articulo .galeria .puntos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-quienes-somos .container-articulo .galeria .puntos p {
+  font-size: 3.75rem;
+  font-weight: 500;
+  color: wheat;
+}
+.container-quienes-somos .container-articulo .galeria .puntos .bold {
+  font-weight: 700;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  color: darkseagreen;
+}
+
+/* estilos para EVENTOS */
+.main-eventos h1 {
+  margin-top: 1rem;
+  text-align: center;
+  font-family: metric-webfont;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  color: beige;
+}
+.main-eventos .container-eventos {
+  margin-bottom: 3rem;
+}
+.main-eventos .container-eventos .eventos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+  margin: 2rem 4rem 0rem;
+  padding: 1rem;
+  border: 0.125rem black solid;
+}
+.main-eventos .container-eventos .eventos .fecha {
+  width: 100%;
+  text-align: center;
+}
+.main-eventos .container-eventos .eventos .fecha a {
+  display: flex;
+  flex-direction: column;
+  color: beige;
+  text-decoration: none;
+}
+.main-eventos .container-eventos .eventos .fecha a:hover {
+  color: red;
+}
+.main-eventos .container-eventos .eventos .descripcion {
+  display: none;
+}
+
+/* estilos para CONTACTANOS */
+.main-contactanos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Contenedor del formulario */
+}
+.main-contactanos .form-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 0.938rem;
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  width: 35.25rem;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+.main-contactanos .form-container:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.main-contactanos .form-container form input:focus,
+.main-contactanos .form-container form textarea:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+.main-contactanos .form-container form h2 {
+  margin-bottom: 1.25rem;
+  color: beige;
+}
+.main-contactanos .form-container form label {
+  display: block;
+  margin-bottom: 0.313rem;
+  color: beige;
+}
+.main-contactanos .form-container form input,
+.main-contactanos .form-container form textarea {
+  width: 100%;
+  padding: 0.625rem;
+  margin-bottom: 0.938rem;
+  border: 0.063rem solid rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: beige;
+  transition: background 0.3s ease;
+}
+.main-contactanos .form-container form input::placeholder,
+.main-contactanos .form-container form textarea::placeholder {
+  color: red;
+}
+.main-contactanos .form-container form button {
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: beige;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.main-contactanos .form-container form button:hover {
+  background-color: beige;
+}
+
+/* estilos para MERCH */
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.625rem;
+  gap: 0.938rem;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  width: 100%; /* Ocupar todo el ancho en móviles */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 60%;
+  height: auto;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+
+.product-card h3 {
+  margin: 0.938rem 0rem 0.625rem;
+  font-size: 1.4em;
+  color: wheat;
+}
+
+.product-card p {
+  font-size: 0.9em;
+  color: beige;
+  margin-bottom: 0.938rem;
+}
+
+.product-card button {
+  padding: 0.5rem 0.938rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #555;
+}
+
+/* codigo para fuente */
+@font-face {
+  font-family: "metric-webfont";
+  src: url("fonts/metric-webfont.woff2") format("woff2"), url("fonts/metric-webfont.woff") format("woff"), url("fonts/metric-webfont.ttf") format("truetype");
+}
+/*media queries DESKTOP*/
+/*index*/
+@media (min-width: 1024px) {
+  .main-index div img {
+    width: 30%;
+    height: auto;
+  }
+}
+/*quienes somos*/
+@media (min-width: 1024px) {
+  .container-quienes-somos .container-articulo {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+/*eventos*/
+@media (min-width: 1024px) {
+  .main-eventos .container-eventos .eventos .descripcion {
+    display: block; /* Muestra la descripción en pantallas grandes */
+  }
+  .main-eventos .container-eventos .eventos .fecha {
+    margin: 0rem 2rem; /* Ajusta el margen */
+  }
+}
+/*contactanos*/
+@media (min-width: 1024px) {
+  .main-contactanos .form-container {
+    margin-top: 2rem;
+  }
+}
+/*merch*/
+@media (min-width: 1024px) {
+  main .product-gallery {
+    justify-content: space-between;
+  }
+  main .product-gallery .product-card {
+    width: 28%;
+    margin-bottom: 1.25rem;
+  }
+}
+/*Media queries TABLET*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-index div {
+    padding: 2rem;
+  }
+  .main-index div img {
+    width: 80%;
+  }
+}
+/*quienes somos*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container-quienes-somos {
+    font-size: 1.8rem;
+    margin-bottom: 8rem;
+  }
+  .container-articulo {
+    justify-self: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-quienes-somos .container-articulo article {
+    max-width: 43.75rem;
+    margin: 3rem 0rem;
+  }
+}
+/*eventos*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container-eventos {
+    margin-top: 12rem;
+  }
+  .main-eventos .container-eventos .eventos {
+    flex-direction: column;
+    margin: 1rem 2rem;
+  }
+}
+/*merch*/
+@media (min-width: 768px) {
+  .product-gallery {
+    flex-direction: row; /* Mostrar productos en fila */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.25rem;
+  }
+  .product-card {
+    width: 48%; /* Ocupa dos columnas en tablets */
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-contactanos .form-container {
+    margin-top: 10rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
