@@ -1,0 +1,115 @@
+/*media queries DESKTOP*/
+/*index*/
+@media (min-width: 1024px) {
+    .main-index {
+        div {
+            img {
+                width: 30%; 
+                height: auto;
+            }
+        }
+    }
+}
+
+/*quienes somos*/
+@media (min-width: 1024px) {
+    .container-quienes-somos .container-articulo {
+      flex-direction: row;
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+/*eventos*/
+@media (min-width: 1024px) {
+    .main-eventos .container-eventos .eventos .descripcion {
+        display: block; /* Muestra la descripción en pantallas grandes */
+    }
+    .main-eventos .container-eventos .eventos .fecha {
+        margin: 0rem 2rem; /* Ajusta el margen */
+    }
+}
+
+/*contactanos*/
+@media (min-width: 1024px){
+   .main-contactanos .form-container{
+    margin-top: 2rem;
+}
+}
+
+/*merch*/
+@media (min-width: 1024px){
+    main .product-gallery {
+        justify-content: space-between;
+    }
+
+    main .product-gallery .product-card {
+        width: 28%; 
+        margin-bottom: 1.25rem; 
+    }
+}
+
+/*Media queries TABLET*/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .main-index div {
+        padding: 2rem; 
+    }
+    .main-index div img {
+        width: 80%; 
+    }
+}
+
+/*quienes somos*/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container-quienes-somos{
+        font-size: 1.8rem;
+        margin-bottom: 8rem;
+    }
+    .container-articulo {
+        justify-self: center;
+        flex-direction: row; 
+        align-items: center;
+        justify-content: center; 
+    }
+    .container-quienes-somos .container-articulo article{
+        max-width: 43.75rem;
+        margin: 3rem 0rem;
+    }
+}
+/*eventos*/
+@media (min-width: 768px) and (max-width: 1023px)  {
+    .container-eventos{
+        margin-top: 12rem;
+    }
+   
+    .main-eventos .container-eventos .eventos {
+        flex-direction: column; 
+        margin: 1rem 2rem; 
+    }
+   
+}
+
+
+/*merch*/
+
+
+@media (min-width: 768px) {
+    .product-gallery {
+        flex-direction: row; /* Mostrar productos en fila */
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1.25rem;
+    }
+
+    .product-card {
+        width: 48%; /* Ocupa dos columnas en tablets */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .main-contactanos .form-container{
+     margin-top: 10rem;
+ }
+ }
+
+
+

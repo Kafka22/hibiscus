@@ -1,0 +1,65 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.falso-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: linear-gradient(to right top, #0e0e0e, #140f17, #1c101c, #260e1e, #300b1c);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* estilos que pisan los predeterminados de bootstrap para el nav */
+.custom-navbar {
+    background-image: linear-gradient(to right bottom, #0e0e0e, #140f17, #1c101c, #260e1e, #300b1c);
+}
+
+.custom-navbar .nav-link {
+    color: white; 
+}
+
+.custom-navbar .nav-link.active {
+    color: rgb(115, 6, 125); /* color del enlace activo */
+}
+
+.custom-navbar .navbar-brand {
+    color: white; 
+}
+
+.space-between {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+.grow {
+    flex-grow: 0 !important;
+    }
+// para menu hamburguesa version mobile
+@media (max-width: 992px) {
+    .navbar-toggler {
+        position: absolute;
+        top: 10px; 
+        right: 20px; 
+        z-index: 1;
+        border: none; /* Quitar el borde del botón hamburguesa */
+        outline: none; /* Eliminar borde cuando está enfocado */
+        box-shadow: none; /* Eliminar la sombra predeterminada */
+    }
+     /* Estilos adicionales para el estado activo del botón hamburguesa */
+    .navbar-toggler:focus,
+    .navbar-toggler:active {
+        outline: none;
+        box-shadow: none;
+        border: none; 
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+}
